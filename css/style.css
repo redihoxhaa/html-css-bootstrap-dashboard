@@ -130,13 +130,13 @@ main .side-nav .fa-chart-simple {
 }
 
 main .dashboard {
+    width: calc(100vw - 68px);
     overflow-y: auto;
 }
 
 main .dashboard .top-banner {
     background-color: var(--top-banner-bg);
     color: white;
-    width: calc(100vw - 68px);
 }
 
 main .dashboard .top-banner .badge {
@@ -188,7 +188,7 @@ main .dashboard .top-banner .student-counter {
         line-height: 40px;
     }
 
-    main .dashboard .top-banner {
+    main .dashboard {
         width: calc(100vw - 151.98px);
     }
 
