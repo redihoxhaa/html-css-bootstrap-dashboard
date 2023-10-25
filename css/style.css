@@ -30,7 +30,9 @@ a {
     --header-btn: #5b5858;
     --bell-color: #ff8f00;
     --side-nav-bg: #051e34;
+    --side-btn-hover-bg: rgba(211, 211, 211, 0.582);
 }
+
 
 /* #endregion VARIABLES */
 
@@ -61,7 +63,12 @@ header .headbar {
 }
 
 header .headbar .img-container {
-    width: 50px;
+    min-width: 50px;
+    height: 50px;
+}
+
+header .headbar .img-container img {
+    height: 100%;
 }
 
 header .headbar .input-group-text {
@@ -71,14 +78,11 @@ header .headbar .input-group-text {
 header .headbar .search-bar {
     background-color: var(--search-bg);
     border-color: var(--search-bg);
-    padding-left: 0;
     font-size: .875rem;
 }
 
 header .headbar .control-buttons {
     color: var(--header-btn);
-    margin: 0;
-    padding: 0;
 }
 
 header .headbar .dropdown .btn {
@@ -93,6 +97,31 @@ main .side-nav {
     background-color: var(--side-nav-bg);
     background-image: url(../img/sidebar-bg.png);
     color: white;
+    height: calc(100vh - 70px);
+}
+
+main .side-nav ul {
+    height: 100%;
+}
+
+main .side-nav ul li {
+    line-height: 2rem;
+}
+
+main .side-nav ul li:hover {
+    background-color: var(--side-btn-hover-bg);
+}
+
+main .side-nav ul li .custom-p {
+    padding-left: .5625rem;
+}
+
+main .side-nav ul li:last-child {
+    margin-top: auto;
+}
+
+main .side-nav .fa-chart-simple {
+    padding-right: .3125rem;
 
 }
 
@@ -113,7 +142,12 @@ main .side-nav {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     header .headbar .img-container {
-        width: 190px;
+        width: 175px;
+        height: 42px;
+    }
+
+    main .side-nav ul li {
+        line-height: 40px;
     }
 }
 

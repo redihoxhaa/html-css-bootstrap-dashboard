@@ -43,7 +43,7 @@
 
     <!-- Header -->
     <header class=" py-2 py-lg-3 d-flex align-items-center">
-        <div class="headbar px-2 d-flex gap-4 align-items-center">
+        <div class="headbar px-3 d-flex gap-4 align-items-center">
 
             <!-- Contenitore logo -->
             <div class="img-container">
@@ -55,15 +55,15 @@
             <!-- Barra di ricerca -->
             <div class="input-group">
                 <span class="input-group-text p-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" class="form-control search-bar shadow-none"
-                    placeholder="Prova a cercare: Lezioni di Lavravel" aria-label="Username"
+                <input type="text" class="form-control search-bar ps-0 shadow-none"
+                    placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username"
                     aria-describedby="basic-addon1">
             </div>
             <!-- /Barra di ricerca -->
 
             <!-- Pulsanti laterali -->
             <div class="side-buttons-container d-none d-lg-block">
-                <ul class="control-buttons d-flex gap-4">
+                <ul class="control-buttons d-flex gap-4 m-0 p-0">
                     <li><a href="#"><i class="fa-solid fa-list-ul"></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-circle-question"></i></i></a></li>
                     <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
@@ -92,14 +92,44 @@
     <!-- Main -->
     <main>
         <div class="main-container d-flex">
+
+            <!-- Navbar laterale -->
             <nav class="side-nav d-flex flex-column m-0 py-4">
-                <ul class="d-flex flex-column gap-2 m-0 px-4">
-                    <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-chart-simple"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-signal"></i></a></li>
+                <!-- Lista comandi -->
+                <ul class="d-flex flex-column m-0 px-3 pe-lg-4">
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-house px-2"></i>
+                            <span class="ps-1 pe-3 d-none d-lg-inline-block">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-chart-simple px-2"></i>
+                            <span class="custom-p pe-3 d-none d-lg-inline-block">Stats</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-signal px-2"></i>
+                            <span class="ps-1 pe-3 d-none d-lg-inline-block">Signals</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-gear px-2"></i>
+                            <span class="ps-1 pe-3 d-none d-lg-inline-block">Admin</span>
+                        </a>
+                    </li>
                 </ul>
+                <!-- Lista comandi -->
+
             </nav>
+            <!-- /Navbar laterale -->
+
+            <!-- Dashboard principale -->
             <div class="dashboard"></div>
+            <!-- /Dashboard principale -->
         </div>
 
     </main>
