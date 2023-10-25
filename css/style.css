@@ -1,8 +1,45 @@
+/* #region RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+/* #endregion RESET */
+
 /* #region VARIABLES */
+
+:root {
+    --body-bg: #f8f9fa;
+    --search-bg: #e5e5e5;
+    --header-btn: #5b5858;
+    --bell-color: #ff8f00;
+    --side-nav-bg: #051e34;
+}
 
 /* #endregion VARIABLES */
 
 /* #region TYPOGRAPHY */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--body-bg);
+}
 
 /* #endregion TYPOGRAPHY */
 
@@ -12,9 +49,52 @@
 
 /* #region HEADER */
 
+header {
+    height: 70px;
+
+}
+
+header .headbar {
+    background-color: white;
+    width: 100vw;
+
+}
+
+header .headbar .img-container {
+    width: 50px;
+}
+
+header .headbar .input-group-text {
+    background-color: var(--search-bg);
+}
+
+header .headbar .search-bar {
+    background-color: var(--search-bg);
+    border-color: var(--search-bg);
+    padding-left: 0;
+    font-size: .875rem;
+}
+
+header .headbar .control-buttons {
+    color: var(--header-btn);
+    margin: 0;
+    padding: 0;
+}
+
+header .headbar .dropdown .btn {
+    color: var(--bell-color);
+}
+
 /* #endregion HEADER */
 
 /* #region MAIN */
+
+main .side-nav {
+    background-color: var(--side-nav-bg);
+    background-image: url(../img/sidebar-bg.png);
+    color: white;
+
+}
 
 /* #endregion MAIN */
 
@@ -23,5 +103,24 @@
 /* #endregion FOOTER */
 
 /* #region MEDIA QUERIES */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header .headbar .img-container {
+        width: 190px;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
 
 /* #endregion MEDIA QUERIES */

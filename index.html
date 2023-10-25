@@ -12,11 +12,21 @@
     <!-- /Import Bootstrap -->
 
     <!-- Import Fonts -->
+
+    <!-- Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- /Roboto -->
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- /Font Awesome -->
+
     <!-- /Import Fonts -->
 
     <!-- Import CSS -->
@@ -32,22 +42,68 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <header class=" py-2 py-lg-3 d-flex align-items-center">
+        <div class="headbar px-2 d-flex gap-4 align-items-center">
+
+            <!-- Contenitore logo -->
+            <div class="img-container">
+                <img src="img/logo.svg" alt="Logo" class="d-none d-lg-block">
+                <img src="img/mobile-logo.png" alt="Mobile Logo" class="d-lg-none">
+            </div>
+            <!-- /Contenitore logo -->
+
+            <!-- Barra di ricerca -->
+            <div class="input-group">
+                <span class="input-group-text p-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" class="form-control search-bar shadow-none"
+                    placeholder="Prova a cercare: Lezioni di Lavravel" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <!-- /Barra di ricerca -->
+
+            <!-- Pulsanti laterali -->
+            <div class="side-buttons-container d-none d-lg-block">
+                <ul class="control-buttons d-flex gap-4">
+                    <li><a href="#"><i class="fa-solid fa-list-ul"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-circle-question"></i></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a></li>
+                </ul>
+            </div>
+            <!-- /Pulsanti laterali -->
+
+            <!-- Campanella -->
+            <div class="dropdown">
+                <button class="btn border-0 p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bell"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Profilo</a></li>
+                    <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+            <!-- /Campanella -->
+
+        </div>
 
     </header>
     <!-- /Header -->
 
     <!-- Main -->
     <main>
+        <div class="main-container d-flex">
+            <nav class="side-nav d-flex flex-column m-0 py-4">
+                <ul class="d-flex flex-column gap-2 m-0 px-4">
+                    <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-chart-simple"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-signal"></i></a></li>
+                </ul>
+            </nav>
+            <div class="dashboard"></div>
+        </div>
 
     </main>
     <!-- /Main -->
-
-    <!-- Footer -->
-    <footer>
-
-    </footer>
-    <!-- /Footer -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
