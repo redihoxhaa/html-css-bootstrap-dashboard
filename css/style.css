@@ -31,6 +31,8 @@ a {
     --bell-color: #ff8f00;
     --side-nav-bg: #051e34;
     --side-btn-hover-bg: rgba(211, 211, 211, 0.582);
+    --top-banner-bg: #1b72e8;
+    --top-banner-badge-bg: #165bba;
 }
 
 
@@ -45,9 +47,11 @@ body {
 
 /* #endregion TYPOGRAPHY */
 
-/* #region COMMON */
+/* #region COMPONENTS */
 
-/* #endregion COMMON */
+
+
+/* #endregion COMPONENTS */
 
 /* #region HEADER */
 
@@ -125,6 +129,35 @@ main .side-nav .fa-chart-simple {
 
 }
 
+main .dashboard {
+    overflow-y: auto;
+}
+
+main .dashboard .top-banner {
+    background-color: var(--top-banner-bg);
+    color: white;
+    width: calc(100vw - 68px);
+}
+
+main .dashboard .top-banner .badge {
+    background-color: var(--top-banner-badge-bg);
+    border-radius: 30px;
+    font-size: .875rem;
+    font-weight: initial;
+}
+
+main .dashboard .top-banner .top-group .boolean-title {
+    font-size: 1.75rem;
+}
+
+main .dashboard .top-banner .bottom-group .fa-angles-right {
+    font-size: .75rem;
+}
+
+main .dashboard .top-banner .student-counter {
+    font-size: 1.625rem;
+}
+
 /* #endregion MAIN */
 
 /* #region FOOTER */
@@ -137,7 +170,12 @@ main .side-nav .fa-chart-simple {
 @media (min-width: 576px) {}
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    main .dashboard .top-banner .student-counter {
+        font-size: 1.75rem;
+    }
+}
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -148,6 +186,18 @@ main .side-nav .fa-chart-simple {
 
     main .side-nav ul li {
         line-height: 40px;
+    }
+
+    main .dashboard .top-banner {
+        width: calc(100vw - 151.98px);
+    }
+
+    main .dashboard .top-banner .top-group .boolean-title {
+        font-size: 2rem;
+    }
+
+    main .dashboard .top-banner .student-counter {
+        font-size: 2rem;
     }
 }
 

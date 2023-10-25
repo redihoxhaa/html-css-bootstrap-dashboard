@@ -128,7 +128,73 @@
             <!-- /Navbar laterale -->
 
             <!-- Dashboard principale -->
-            <div class="dashboard"></div>
+            <div class="dashboard">
+                <div class="top-banner row g-0 p-3 ">
+                    <!-- Nuovo studente -->
+                    <div class="col12 col-md-4 col-lg-2  order-md-3 py-3 py-lg-2 align-items-center">
+
+                        <!-- Pulsante -->
+                        <span>Nuovo Studente</span>
+                        <button class="btn btn-outline-light ms-3" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                                class="fa-solid fa-plus"></i></button>
+                        <!-- /Pulsante -->
+
+                        <!-- Offcanvas laterale dx -->
+                        <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                            id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <p>Try scrolling the rest of the page to see this option in action.</p>
+                            </div>
+                        </div>
+                        <!-- /Offcanvas laterale dx -->
+
+                    </div>
+                    <!-- /Nuovo studente -->
+
+                    <!-- Breadcrumb -->
+                    <div class="col-md-4 col-lg-6 py-3 py-lg-2">
+
+                        <!-- Parte superiore -->
+                        <div class="top-group">
+                            <span class="boolean-title">Boolean</span>
+                            <span class="badge mx-1">Piano blaze</span>
+                        </div>
+                        <!-- /Parte superiore -->
+
+                        <!-- Parte inferiore -->
+                        <div class="bottom-group align-items-center mt-1">
+                            <span class="badge me-1">3 app</span>
+                            <i class="fa-solid fa-angles-right me-1"></i>
+                            <div class="hidden-breadcrumb d-none d-lg-inline">
+                                <span class="badge me-1">Boolean mobile app</span>
+                                <span class="badge me-1">Boolean web app</span>
+                                <span class="badge me-1">Boolean blog app</span>
+                            </div>
+                            <!-- Pulsante + -->
+                            <span class="badge me-1 d-lg-none">+</span>
+                            <!-- /Pulsante + -->
+                        </div>
+                        <!-- /Parte inferiore -->
+
+                    </div>
+                    <!-- /Breadcrumb -->
+
+                    <!-- Studenti online -->
+                    <div class="col12 col-md-4 col-lg-4 px-md-4 py-3 py-lg-2">
+                        <span>Studenti online negli ultimi 30 minuti</span>
+                        <div class="student-counter">125</div>
+                    </div>
+                    <!-- /Studenti online -->
+
+                </div>
+            </div>
             <!-- /Dashboard principale -->
         </div>
 
