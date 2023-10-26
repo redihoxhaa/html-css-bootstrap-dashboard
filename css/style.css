@@ -27,8 +27,8 @@ a {
     --side-btn-hover-bg: rgba(211, 211, 211, 0.582);
     --top-banner-bg: #1b72e8;
     --top-banner-badge-bg: #165bba;
+    --header-height: 4.375rem;
 }
-
 
 /* #endregion VARIABLES */
 
@@ -41,28 +41,20 @@ body {
 
 /* #endregion TYPOGRAPHY */
 
-/* #region COMPONENTS */
-
-
-
-/* #endregion COMPONENTS */
-
 /* #region HEADER */
 
 header {
-    height: 70px;
-
+    height: var(--header-height);
 }
 
 header .headbar {
     background-color: white;
     width: 100vw;
-
 }
 
 header .headbar .img-container {
-    min-width: 50px;
-    height: 50px;
+    min-width: 40px;
+    height: 40px;
 }
 
 header .headbar .img-container img {
@@ -95,7 +87,7 @@ main .side-nav {
     background-color: var(--side-nav-bg);
     background-image: url(../img/sidebar-bg.png);
     color: white;
-    height: calc(100vh - 70px);
+    height: calc(100vh - var(--header-height));
 }
 
 main .side-nav ul li {
@@ -112,12 +104,11 @@ main .side-nav ul li .custom-p {
 
 main .side-nav .fa-chart-simple {
     padding-right: .3125rem;
-
 }
 
 main .dashboard {
     width: calc(100vw - 68px);
-    height: calc(100vh - 70px);
+    height: calc(100vh - var(--header-height));
 }
 
 main .dashboard .top-banner {
@@ -150,7 +141,8 @@ main .dashboard .offcanvas {
 
 
 main .dashboard .main-dashboard .classes-table ul,
-main .dashboard .main-dashboard .todo-checklist ul {
+main .dashboard .main-dashboard .todo-checklist ul,
+main .dashboard .main-dashboard .active-users ul li {
     font-size: .875rem;
 }
 
@@ -160,34 +152,22 @@ main .dashboard .main-dashboard .todo-checklist ul li .form-check {
 }
 
 
-
 main .dashboard .main-dashboard .classes-table .badge.text-bg-warning {
     color: white !important;
 }
 
-main .dashboard .main-dashboard .classes-table button {
-    width: 30px;
-    height: 30px;
-}
-
+main .dashboard .main-dashboard .classes-table button,
 main .dashboard .main-dashboard .classes-table .classes-table-icon {
-    height: 30px;
     width: 30px;
+    height: 30px;
 }
 
-main .dashboard .main-dashboard .active-users ul li {
-    font-size: .875rem;
-}
 
 main .dashboard .main-dashboard .active-users .graph-name {
     font-size: 1.25rem;
 }
 
 /* #endregion MAIN */
-
-/* #region FOOTER */
-
-/* #endregion FOOTER */
 
 /* #region MEDIA QUERIES */
 
@@ -208,10 +188,10 @@ main .dashboard .main-dashboard .active-users .graph-name {
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
     header .headbar .img-container {
-        max-width: 130px;
         min-width: 130px;
-        max-height: 35px;
+        height: 35px;
     }
 
     main .side-nav ul li {
@@ -231,14 +211,12 @@ main .dashboard .main-dashboard .active-users .graph-name {
     }
 
     main .dashboard .offcanvas {
-        width: 40vw;
+        width: 42vw;
     }
 
     main .dashboard .main-dashboard .classes-table ul li thead tr .nome {
         width: 44%;
     }
-
-
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
@@ -249,8 +227,6 @@ main .dashboard .main-dashboard .active-users .graph-name {
     }
 }
 
-
-
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
 
@@ -258,6 +234,5 @@ main .dashboard .main-dashboard .active-users .graph-name {
         width: 63%;
     }
 }
-
 
 /* #endregion MEDIA QUERIES */
