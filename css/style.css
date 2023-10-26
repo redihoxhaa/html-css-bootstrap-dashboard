@@ -1,11 +1,5 @@
 /* #region RESET */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 img {
     display: block;
     width: 100%;
@@ -123,7 +117,7 @@ main .side-nav .fa-chart-simple {
 
 main .dashboard {
     width: calc(100vw - 68px);
-    overflow-y: auto;
+    height: calc(100vh - 70px);
 }
 
 main .dashboard .top-banner {
@@ -148,6 +142,10 @@ main .dashboard .top-banner .bottom-group .fa-angles-right {
 
 main .dashboard .top-banner .student-counter {
     font-size: 1.625rem;
+}
+
+main .dashboard .offcanvas {
+    width: 100vw;
 }
 
 
@@ -175,6 +173,14 @@ main .dashboard .main-dashboard .classes-table button {
 main .dashboard .main-dashboard .classes-table .classes-table-icon {
     height: 30px;
     width: 30px;
+}
+
+main .dashboard .main-dashboard .active-users ul li {
+    font-size: .875rem;
+}
+
+main .dashboard .main-dashboard .active-users .graph-name {
+    font-size: 1.25rem;
 }
 
 /* #endregion MAIN */
@@ -222,6 +228,10 @@ main .dashboard .main-dashboard .classes-table .classes-table-icon {
 
     main .dashboard .top-banner .student-counter {
         font-size: 2rem;
+    }
+
+    main .dashboard .offcanvas {
+        width: 40vw;
     }
 
     main .dashboard .main-dashboard .classes-table ul li thead tr .nome {

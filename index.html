@@ -128,7 +128,7 @@
             <!-- /Navbar laterale -->
 
             <!-- Dashboard principale -->
-            <div class="dashboard">
+            <div class="dashboard overflow-auto">
                 <div class="top-banner row g-0 p-3">
                     <!-- Nuovo studente -->
                     <div class="col12 col-md-4 col-lg-2 order-md-3 py-3 py-lg-2 align-items-center">
@@ -143,15 +143,123 @@
                         <!-- Offcanvas laterale dx -->
                         <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
                             id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+                            <!-- Header del canvas -->
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling
+
+                                <!-- Titolo canvas -->
+                                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Inserisci un nuovo
+                                    studente
                                 </h5>
+                                <!-- /Titolo canvas -->
+
+                                <!-- Pulsante di chiusura -->
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
+                                <!-- /Pulsante di chiusura -->
+
                             </div>
+                            <!-- /Header del canvas -->
+
+                            <!-- Corpo del canvas -->
                             <div class="offcanvas-body">
-                                <p>Try scrolling the rest of the page to see this option in action.</p>
+
+                                <!-- Form di aggiunta nuovo studente -->
+                                <form class="row g-3">
+
+                                    <!-- Input nome -->
+                                    <div class="col-md-6">
+                                        <label for="inputName" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="inputName" />
+                                    </div>
+                                    <!-- /Input nome -->
+
+                                    <!-- Input cognome -->
+                                    <div class="col-md-6">
+                                        <label for="inputSurname" class="form-label">Cognome</label>
+                                        <input type="text" class="form-control" id="inputSurname" />
+                                    </div>
+                                    <!-- /Input cognome -->
+
+                                    <!-- Input email -->
+                                    <div class="col-md-6">
+                                        <label for="inputEmail" class="form-label">Email</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">@</div>
+                                            <input type="email" class="form-control" id="inputEmail" />
+                                        </div>
+                                    </div>
+                                    <!-- /Input email -->
+
+                                    <!-- Input password -->
+                                    <div class="col-md-6">
+                                        <label for="inputPassword4" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="inputPassword4" />
+                                    </div>
+                                    <!-- /Input password -->
+
+                                    <!-- Input indirizzo -->
+                                    <div class="col-12">
+                                        <label for="inputAddress" class="form-label">Indirizzo</label>
+                                        <input type="text" class="form-control" id="inputAddress" />
+                                    </div>
+                                    <!-- /Input indirizzo -->
+
+                                    <!-- Input città -->
+                                    <div class="col-md-6">
+                                        <label for="inputCity" class="form-label">Città</label>
+                                        <input type="text" class="form-control" id="inputCity" />
+                                    </div>
+                                    <!-- /Input città -->
+
+                                    <!-- Input stato -->
+                                    <div class="col-md-4">
+                                        <label for="inputState" class="form-label">Stato</label>
+                                        <select id="inputState" class="form-select">
+                                            <option selected="">Scegli...</option>
+                                            <option>United States</option>
+                                        </select>
+                                    </div>
+                                    <!-- /Input stato -->
+
+                                    <!-- Input CAP -->
+                                    <div class="col-md-2">
+                                        <label for="inputZip" class="form-label">CAP</label>
+                                        <input type="text" class="form-control" id="inputZip" />
+                                    </div>
+                                    <!-- /Input CAP -->
+
+                                    <!-- Upload foto -->
+                                    <div class="col-12">
+                                        <label for="inputPhoto" class="form-label">Foto</label>
+                                        <input type="file" class="form-control" id="inputPhoto"
+                                            aria-describedby="inputGroupFileAddon04" aria-label="Upload" />
+                                    </div>
+                                    <!-- /Upload foto -->
+
+                                    <!-- Check per proseguire -->
+                                    <div class="col-12">
+                                        <div class="form-check pt-3 pb-2">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck" />
+                                            <label class="form-check-label" for="gridCheck">Seleziona per
+                                                proseguire</label>
+                                        </div>
+                                    </div>
+                                    <!-- /Check per proseguire -->
+
+                                    <!-- Bottoni -->
+                                    <div class="col-12">
+                                        <button class="btn btn-primary">Salva</button>
+                                        <button type="reset" class="btn btn-warning">Svuota</button>
+                                    </div>
+                                    <!-- /Bottoni -->
+
+                                </form>
+                                <!-- /Form di aggiunta nuovo studente -->
+
                             </div>
+                            <!-- /Corpo del canvas -->
+
                         </div>
                         <!-- /Offcanvas laterale dx -->
 
@@ -203,7 +311,7 @@
                         <div class="card classes-table" style="width: 100%">
 
                             <!-- Titolo card -->
-                            <div class="card-header pt-1">
+                            <div class="card-header pt-1 pb-3">
                                 <span class="fs-3">Prossime classi</span>
                             </div>
                             <!-- /Titolo card -->
@@ -211,7 +319,7 @@
                             <!-- Lista classi -->
                             <ul class="list-group list-group-flush my-2">
                                 <li class="list-group-item">
-                                    <table class="table tabe-hover">
+                                    <table class="table table-hover">
 
                                         <!-- Intestazioni della tabella -->
                                         <thead>
@@ -410,7 +518,7 @@
                         <div class="card faq-accordion mt-4" style="width: 100%">
 
                             <!-- Titolo della card -->
-                            <div class="card-header pt-1">
+                            <div class="card-header pt-1 pb-3">
                                 <span class="fs-3">F.A.Q.</span>
                             </div>
                             <!-- /Titolo della card -->
@@ -479,7 +587,7 @@
 
                         <!-- /Card todo -->
                         <div class="card todo-checklist mt-4" style="width: 100%">
-                            <div class="card-header pt-1">
+                            <div class="card-header pt-1 pb-3">
                                 <span class="fs-3">Todo</span>
                             </div>
 
@@ -524,17 +632,34 @@
                         </div>
                         <!-- /Card todo -->
 
-
-                        <div class="card mt-4" style="width: 100%">
-                            <div class="card-header pt-1">
-                                <span class="fs-3">Todo</span>
-                            </div>
+                        <!-- Card utenti attivi -->
+                        <div class="active-users card mt-4" style="width: 100%">
                             <ul class="list-group list-group-flush my-2">
                                 <li class="list-group-item">
-
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="graph-img-container">
+                                                    <img src="img/stats.jpeg" alt="Grafico">
+                                                </div>
+                                                <span class="graph-name d-block">Utenti attivi</span>
+                                                <span class="d-block my-2">Lista degli utenti attivi in piattagorma
+                                                    nell'ultimo mese</span>
+                                            </li>
+                                            <li class="list-group-item">Gennaio: 1200</li>
+                                            <li class="list-group-item">Febbraio: 800</li>
+                                            <li class="list-group-item">Marzo: 1500</li>
+                                            <li class="list-group-item"><a href="#"
+                                                    class="report-link link-primary d-block py-2"
+                                                    style="text-decoration: underline;">Visualizza
+                                                    report approfondito</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
+                        <!-- /Card utenti attivi -->
                     </div>
                     <!-- /Colonna desktop destra -->
                 </div>
