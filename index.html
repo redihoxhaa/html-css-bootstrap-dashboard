@@ -56,7 +56,7 @@
             <div class="input-group">
                 <span class="input-group-text p-2" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" class="form-control search-bar ps-0 shadow-none"
-                    placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Username"
+                    placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search"
                     aria-describedby="basic-addon1">
             </div>
             <!-- /Barra di ricerca -->
@@ -96,29 +96,29 @@
             <!-- Navbar laterale -->
             <nav class="side-nav d-flex flex-column m-0 py-4">
                 <!-- Lista comandi -->
-                <ul class="d-flex flex-column m-0 px-3 pe-lg-4">
+                <ul class="d-flex flex-column m-0 px-3 pe-lg-4 h-100">
                     <li>
                         <a href="#">
                             <i class="fa-solid fa-house px-2"></i>
-                            <span class="ps-1 pe-3 d-none d-lg-inline-block">Home</span>
+                            <span class="ps-1 pe-3 d-none d-lg-inline">Home</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa-solid fa-chart-simple px-2"></i>
-                            <span class="custom-p pe-3 d-none d-lg-inline-block">Stats</span>
+                            <span class="custom-p pe-3 d-none d-lg-inline">Stats</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa-solid fa-signal px-2"></i>
-                            <span class="ps-1 pe-3 d-none d-lg-inline-block">Signals</span>
+                            <span class="ps-1 pe-3 d-none d-lg-inline">Signals</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="mt-auto">
                         <a href="#">
                             <i class="fa-solid fa-gear px-2"></i>
-                            <span class="ps-1 pe-3 d-none d-lg-inline-block">Admin</span>
+                            <span class="ps-1 pe-3 d-none d-lg-inline">Admin</span>
                         </a>
                     </li>
                 </ul>
@@ -129,9 +129,9 @@
 
             <!-- Dashboard principale -->
             <div class="dashboard">
-                <div class="top-banner row g-0 p-3 ">
+                <div class="top-banner row g-0 p-3">
                     <!-- Nuovo studente -->
-                    <div class="col12 col-md-4 col-lg-2  order-md-3 py-3 py-lg-2 align-items-center">
+                    <div class="col12 col-md-4 col-lg-2 order-md-3 py-3 py-lg-2 align-items-center">
 
                         <!-- Pulsante -->
                         <span>Nuovo Studente</span>
@@ -196,55 +196,347 @@
                 </div>
 
                 <div class="main-dashboard row g-0">
-                    <div class="col12 col-lg-8 px-2 py-4">
 
-                        <div class="card" style="width: 100%">
-                            <div class="classes-table card-header">
+                    <!-- Colonna desktop sinistra -->
+                    <div class="col12 col-lg-8 px-2 py-4">
+                        <!-- Tabella classi -->
+                        <div class="card classes-table" style="width: 100%">
+
+                            <!-- Titolo card -->
+                            <div class="card-header pt-1">
                                 <span class="fs-3">Prossime classi</span>
                             </div>
-                            <ul class="list-group list-group-flush">
+                            <!-- /Titolo card -->
+
+                            <!-- Lista classi -->
+                            <ul class="list-group list-group-flush my-2">
                                 <li class="list-group-item">
                                     <table class="table tabe-hover">
+
+                                        <!-- Intestazioni della tabella -->
                                         <thead>
                                             <tr>
-                                                <th scope="col" class="fw-normal" style="width: 60%;">Nome</th>
-                                                <th scope="col" class="fw-normal">Data inizio</th>
-                                                <th scope="col" class="fw-normal">ROI</th>
-                                                <th scope="col" class="fw-normal">Stato</th>
-                                                <th scope="col" class="fw-normal">Azioni</th>
+                                                <th scope="col" class="nome fw-normal">Nome</th>
+                                                <th scope="col"
+                                                    class="data fw-normal text-center d-none d-md-table-cell">
+                                                    Data inizio
+                                                </th>
+                                                <th scope="col" class="fw-normal text-center d-none d-sm-table-cell">
+                                                    ROI
+                                                </th>
+                                                <th scope="col" class="fw-normal text-center">Stato
+                                                </th>
+                                                <th scope="col" class="fw-normal text-center">Azioni</th>
 
                                             </tr>
                                         </thead>
+                                        <!-- /Intestazioni della tabella -->
+
+                                        <!-- Corpo della tabella -->
                                         <tbody>
+
+                                            <!-- Singola riga -->
                                             <tr>
                                                 <th scope="row">
-                                                    <img src="img/" alt="">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 75</span>
                                                 </th>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                <td>ciao</td>
+                                                <td class="text-center d-none d-md-table-cell">15 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
                                             </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 76</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">16 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 77</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">17 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span
+                                                        class="badge text-bg-warning">process</span></td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 78</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">18 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 79</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">19 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-danger">failed</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 80</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">20 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 81</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">21 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-danger">failed</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
+
+                                            <!-- Singola riga -->
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="img/class-avatar.png" alt="Icona tabella"
+                                                        class="classes-table-icon d-inline-block">
+                                                    <span class="fw-normal ps-2">Classe 82</span>
+                                                </th>
+                                                <td class="text-center d-none d-md-table-cell">22 Feb 2021</td>
+                                                <td class="text-center d-none d-sm-table-cell">20%</td>
+                                                <td class="text-center"><span class="badge text-bg-success">Done</span>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn btn-outline-secondary p-0 me-1"><i
+                                                            class="fa-solid fa-pencil"></i></button>
+                                                    <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                            class="fa-solid fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                            <!-- /Singola riga -->
 
                                         </tbody>
+                                        <!-- /Corpo della tabella -->
+
                                     </table>
                                 </li>
                             </ul>
-                        </div>
+                            <!-- /Lista classi -->
 
+                        </div>
+                        <!-- /Tabella classi -->
+
+                        <!-- Card delle FAQ -->
+                        <div class="card faq-accordion mt-4" style="width: 100%">
+
+                            <!-- Titolo della card -->
+                            <div class="card-header pt-1">
+                                <span class="fs-3">F.A.Q.</span>
+                            </div>
+                            <!-- /Titolo della card -->
+
+                            <!-- Accordion delle FAQ -->
+                            <ul class="list-group list-group-flush my-2">
+                                <li class="list-group-item">
+                                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                    aria-expanded="false" aria-controls="flush-collapseOne">
+                                                    Come aggiungere un nuovo studente?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Clicca sul + in alto nella sezione blu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                    aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                    Come posso accedere alle informazioni del mio account?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Clicca sull'icona della campanella.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    Posso usare questa dashboard da mobile?
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionFlushExample">
+                                                <div class="accordion-body">Di solito è inusuale usare dashboard del
+                                                    genere da mobile, ma i nostri sviluppatori hanno fatto di tutto per
+                                                    permettere
+                                                    un'esperienza utente accettabile anche da dispositivi a schermi
+                                                    ridotti.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- /Accordion delle FAQ -->
+                        </div>
+                        <!-- /Card delle FAQ -->
                     </div>
-                    <div class="col12 col-lg-4 px-2 py-4">
-                        <div class="card" style="width: 100%">
-                            <div class="todo card-header">
+                    <!-- /Colonna desktop sinistra -->
+
+                    <!-- Colonna desktop destra -->
+                    <div class="col12 col-lg-4 px-2 ps-3">
+
+                        <!-- /Card todo -->
+                        <div class="card todo-checklist mt-4" style="width: 100%">
+                            <div class="card-header pt-1">
                                 <span class="fs-3">Todo</span>
                             </div>
-                            <ul class="list-group list-group-flush">
+
+                            <!-- Checklist -->
+                            <ul class="list-group list-group-flush my-2">
+                                <li class="list-group-item">
+                                    <div class="card">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Kickoff nuove classi
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Lezione su Bootstrap 5 in classe #75
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Controllare username github studenti
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- /Checklist -->
+
+                        </div>
+                        <!-- /Card todo -->
+
+
+                        <div class="card mt-4" style="width: 100%">
+                            <div class="card-header pt-1">
+                                <span class="fs-3">Todo</span>
+                            </div>
+                            <ul class="list-group list-group-flush my-2">
                                 <li class="list-group-item">
 
                                 </li>
                             </ul>
                         </div>
                     </div>
+                    <!-- /Colonna desktop destra -->
                 </div>
             </div>
             <!-- /Dashboard principale -->
