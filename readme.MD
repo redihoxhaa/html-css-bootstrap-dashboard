@@ -14,7 +14,7 @@ Con questo esercizio della durata di 2 giorni, abbiamo concluso il nostro percor
 
 ## Note
 
-E' stato interessante vedere come bootstrap ha reso possibile funzionalità responsive alle tabelle tramite le proprie classi personalizzate. Di seguito una porzione di codice che fa capire quanto è facile personalizzare le tabelle con effetti visivi (in questo caso `:hover`)
+E' stato interessante vedere come bootstrap ha reso possibile la funzionalità responsive alle tabelle tramite le proprie classi personalizzate. Di seguito una porzione di codice che fa capire quanto è facile personalizzare le tabelle con effetti visivi (in questo caso `:hover`)
 
 ```html
  <table class="table table-hover">
