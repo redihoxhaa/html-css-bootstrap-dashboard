@@ -83,87 +83,89 @@ header .headbar .dropdown .btn {
 
 /* #region MAIN */
 
-main .side-nav {
+.main-container {
+    height: calc(100vh - var(--header-height));
+}
+
+.main-container .side-nav {
     background-color: var(--side-nav-bg);
     background-image: url(../img/sidebar-bg.png);
     color: white;
-    height: calc(100vh - var(--header-height));
+    flex-shrink: 0;
 }
 
-main .side-nav ul li {
+.main-container .side-nav ul li {
     line-height: 2rem;
 }
 
-main .side-nav ul li:hover {
+.main-container .side-nav ul li:hover {
     background-color: var(--side-btn-hover-bg);
 }
 
-main .side-nav ul li .custom-p {
+.main-container .side-nav ul li .custom-p {
     padding-left: .5625rem;
 }
 
-main .side-nav .fa-chart-simple {
+.main-container .side-nav .fa-chart-simple {
     padding-right: .3125rem;
 }
 
-main .dashboard {
-    width: calc(100vw - 68px);
-    height: calc(100vh - var(--header-height));
+.main-container .dashboard {
+    flex-grow: 1;
 }
 
-main .dashboard .top-banner {
+.main-container .dashboard .top-banner {
     background-color: var(--top-banner-bg);
     color: white;
 }
 
-main .dashboard .top-banner .badge {
+.main-container .dashboard .top-banner .badge {
     background-color: var(--top-banner-badge-bg);
     border-radius: 30px;
     font-size: .875rem;
     font-weight: initial;
 }
 
-main .dashboard .top-banner .top-group .boolean-title {
+.main-container .dashboard .top-banner .top-group .boolean-title {
     font-size: 1.75rem;
 }
 
-main .dashboard .top-banner .bottom-group .fa-angles-right {
+.main-container .dashboard .top-banner .bottom-group .fa-angles-right {
     font-size: .75rem;
 }
 
-main .dashboard .top-banner .student-counter {
+.main-container .dashboard .top-banner .student-counter {
     font-size: 1.625rem;
 }
 
-main .dashboard .offcanvas {
+.main-container .dashboard .offcanvas {
     width: 100vw;
 }
 
-
-main .dashboard .main-dashboard .classes-table ul,
-main .dashboard .main-dashboard .todo-checklist ul,
-main .dashboard .main-dashboard .active-users ul li {
+.main-container .dashboard .control-panel .classes-table,
+.main-container .dashboard .control-panel .todo-checklist,
+.main-container .dashboard .control-panel .active-users {
     font-size: .875rem;
 }
 
-main .dashboard .main-dashboard .todo-checklist ul li .form-check {
+.main-container .dashboard .control-panel .todo-checklist .form-check {
     min-height: unset;
     margin: unset;
 }
 
 
-main .dashboard .main-dashboard .classes-table .badge.text-bg-warning {
+.main-container .dashboard .control-panel .classes-table .badge.text-bg-warning {
     color: white !important;
 }
 
-main .dashboard .main-dashboard .classes-table button,
-main .dashboard .main-dashboard .classes-table .classes-table-icon {
+.main-container .dashboard .control-panel .classes-table button,
+.main-container .dashboard .control-panel .classes-table .classes-table-icon {
     width: 30px;
     height: 30px;
 }
 
 
-main .dashboard .main-dashboard .active-users .graph-name {
+.main-container .dashboard .control-panel .active-users .graph-name {
     font-size: 1.25rem;
 }
 
@@ -177,11 +179,11 @@ main .dashboard .main-dashboard .active-users .graph-name {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-    main .dashboard .top-banner .student-counter {
+    .main-container .dashboard .top-banner .student-counter {
         font-size: 1.75rem;
     }
 
-    main .dashboard .main-dashboard .classes-table ul li thead tr .nome {
+    .main-container .dashboard .control-panel .classes-table thead tr .nome {
         width: 56%;
     }
 }
@@ -194,27 +196,23 @@ main .dashboard .main-dashboard .active-users .graph-name {
         height: 35px;
     }
 
-    main .side-nav ul li {
+    .main-container .side-nav ul li {
         line-height: 40px;
     }
 
-    main .dashboard {
-        width: calc(100vw - 151.98px);
-    }
-
-    main .dashboard .top-banner .top-group .boolean-title {
+    .main-container .dashboard .top-banner .top-group .boolean-title {
         font-size: 2rem;
     }
 
-    main .dashboard .top-banner .student-counter {
+    .main-container .dashboard .top-banner .student-counter {
         font-size: 2rem;
     }
 
-    main .dashboard .offcanvas {
+    .main-container .dashboard .offcanvas {
         width: 42vw;
     }
 
-    main .dashboard .main-dashboard .classes-table ul li thead tr .nome {
+    .main-container .dashboard .control-panel .classes-table thead tr .nome {
         width: 44%;
     }
 }
@@ -222,7 +220,7 @@ main .dashboard .main-dashboard .active-users .graph-name {
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
-    main .dashboard .main-dashboard .classes-table ul li thead tr .nome {
+    .main-container .dashboard .control-panel .classes-table thead tr .nome {
         width: 55%;
     }
 }
@@ -230,7 +228,7 @@ main .dashboard .main-dashboard .active-users .graph-name {
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
 
-    main .dashboard .main-dashboard .classes-table ul li thead tr .nome {
+    .main-container .dashboard .control-panel .classes-table thead tr .nome {
         width: 63%;
     }
 }
